@@ -1,6 +1,6 @@
 import pytest
-from main.app import app
-from test.test_data import *
+from server.main.app import app
+from server.test.test_data import *
 
 
 @pytest.fixture

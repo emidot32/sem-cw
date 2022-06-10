@@ -1,9 +1,10 @@
 """API for task10"""
 from flask import Flask, Response, jsonify, request
 from flasgger import Swagger, swag_from
-from place_ships import get_all_appropriate_ships
-from swagger.swagger_config import swagger_template, swagger_config
-import conditions_generation
+
+from .place_ships import get_all_appropriate_ships
+from .swagger.swagger_config import swagger_template, swagger_config
+from server.main import conditions_generation
 
 app = Flask(__name__)
 swagger = Swagger(app, template=swagger_template, config=swagger_config)
